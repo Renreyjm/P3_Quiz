@@ -44,8 +44,8 @@ exports.addCmd = rl => {
 
 exports.creditsCmd = rl => {
     	log('Autores de la practica:');
-    	log('José Manuel Rengifo Reynolds');
-    	log('Daniel Acosta Salinero');
+    	log('JOSE MANUEL RENGIFO REYNOLDS');
+    	log('DANIEL ACOSTA SALINERO');
     	rl.prompt();
 };
 
@@ -55,7 +55,7 @@ exports.creditsCmd = rl => {
 
 exports.listCmd = rl => {
     	model.getAll().forEach((quiz,id) => {
-        log(`[${ colorize(id,'magenta')}] : ${quiz.question} `);
+        log(`[${ colorize(id,'magenta')}]:${quiz.question}`);
       });
     	rl.prompt();
 
@@ -198,8 +198,8 @@ exports.playCmd = rl => {
                     score+=1;
                     total-=1;
                     if(total === 0){
-                        log(`No hay nada más que preguntar\nFin del juego. Aciertos: ${score}`);
-                        biglog(`${score}`, "magenta");
+                        log(`Has respondido correctamente a todas las preguntas. Aciertos: ${score}`);
+                        biglog(`${score}`, "green");
                     }else{
                         log(`CORRECTO - Lleva ${score} aciertos`);
                         playOne();
