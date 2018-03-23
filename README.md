@@ -1,2 +1,2 @@
-# P2_Quiz
-Entrega 2 de la asignatura de CORE
+# P3_Quiz
+Entrega 3 de la asignatura de CORE

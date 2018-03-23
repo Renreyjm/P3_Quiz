@@ -28,7 +28,6 @@ const rl = readline.createInterface({
 });
 
 rl.prompt();
-
 rl.on('line', (line) => {
 
 		let args = line.split(" ");
@@ -92,9 +91,7 @@ rl.on('line', (line) => {
   
 })
 .on('close', () => {
-
   log('Adios pajaro');
-
   process.exit(0);
 
 });

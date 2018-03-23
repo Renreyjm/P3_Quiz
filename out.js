@@ -10,19 +10,16 @@ const colorize = (msg, color) =>{
 };
 
 //Mensaje de log
-
 const log = (msg, color) =>{
 	console.log(colorize(msg, color));
 };
 
 //Mensaje de log en grande
-
 const biglog = (msg,color) =>{
 	log(figlet.textSync(msg, {horizontalLayout:'full'}), color);
 };
 
 //Mensaje de error
-
 const errorlog = (emsg) =>{
 	log(`${colorize("Error", "red")}: ${colorize(colorize(emsg, "red"), "bgYellowBright")}`);
 };

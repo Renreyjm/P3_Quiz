@@ -13,7 +13,6 @@ sequelize.define('quiz', {
 		validate: {notEmpty: {msg: "La respuesta no puede estar vacía"}}
 	}
 });
-
 sequelize.sync()
 .then(() => sequelize.models.quiz.count())
 .then(count => {

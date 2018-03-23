@@ -253,13 +253,11 @@ exports.playCmd = rl => {
     let score = 0;
     let toBeResolved = [];
     biglog(`A jugar`, "green");
-
     models.quiz.findAll()
       .then(quizzes => {
         quizzes.forEach((quiz,id) => {
           toBeResolved[id] =quiz;
         });
-
         const playOne = () => {
           if (toBeResolved.length === 0) {
             log(`No hay más preguntas`);
