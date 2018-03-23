@@ -214,7 +214,7 @@ exports.editCmd = (rl, id) => {
 
 exports.testCmd = (rl , id) => {
   validateId(id)
-    .then(id=models.quiz.findById(id))
+    .then(id => models.quiz.findById(id))
     .then(quiz => {
       if (!quiz) {
         throw new Error(`No existe un quiz asociado al id=${id}.`);
@@ -223,7 +223,7 @@ exports.testCmd = (rl , id) => {
         .then(a=> {
           if (a.toLowerCase().trim() === quiz.answer.toLowerCase().trim()) {
             log('Su respuesta es: ');
-            biglog('CORECTA', 'green');
+            biglog('CORRECTA', 'green');
             //rl.prompt();
           } else {
             log('Su respuesta es: ');
